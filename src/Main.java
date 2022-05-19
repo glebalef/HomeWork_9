@@ -17,12 +17,24 @@ public class Main {
         Book almazKoles = new Book ("Алмазная колесница", bAkunin, 2002);
         Book solaris = new Book("Солярис", sLem, 1961);
 
+        //добавим еще одну книгу для ДЗ-10
+        Book solarisNew = new Book ("Солярис", sLem, 2002 );
+
+        // Проверка работы классов Book и Author
         printBookData(almazKoles);
         printBookData(solaris);
 
         // проверка работы Сеттера
         almazKoles.setYear(2022);
-        System.out.println("Книга переиздана в году: "+almazKoles.getYear());
+        System.out.println("Книга "+almazKoles.getBookName()+" переиздана в году: "+almazKoles.getYear());
+
+
+        // Домашнее задание 10:
+        System.out.println(bAkunin.toString());
+        System.out.println(almazKoles.toString());
+
+        System.out.println(solaris.equals(solarisNew));
+
 
     }
 }
